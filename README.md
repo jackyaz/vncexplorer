@@ -3,17 +3,16 @@ VNCExplorer is a set of scripts that can be run on supported platforms to gather
  the relevant configuration of the customer system - to help RealVNC Support diagnose and resolve customer support tickets more efficiently.
 
 ## Installing / Getting started
-The latest release is available at: https://github.com/RealVNC/vncexplorer/releases/latest
+The latest release is available in the [Releases](https://github.com/RealVNC/vncexplorer/releases/latest) section
  
 Simply extract the ZIP or tar.gz file from the link above and run with administrative priveleges on your system.
-
 
 Platform specific details below:
 
 ### AIX/Solaris/HPUX/Linux/OSX
 #### Data collected
-The contents of /etc/vnc, /etc/pam.d, contents of user .vnc directory, currently running VNC processes, current user environment, X11 configuration information, 
-system IP addresses, installed VNC packages, system hardware details, vnc license information 
+The contents of /etc/vnc, /etc/pam.d, contents of user .vnc directory, currently running VNC processes, current user environment, X11 configuration information,
+system IP addresses, installed VNC packages, system hardware details, vnc license information
 Private keys and chat history are NOT included
 
 #### Using (AIX/Solaris/HPUX/Linux/OSX)
@@ -21,17 +20,16 @@ Once downloaded and extracted onto the relevant system, please make this script 
 This script must be run either as root or via sudo.
 To run the script using sudo, type: ```sudo ./vncexplorer.sh```
 
-The script will gather information about the system it's running on and will create a temporary working directory called {hostname} in the current working directory.  The script will prompt for a non-root username. This should be the username used if you run RealVNC Server usermode or virtual mode server. 
+The script will gather information about the system it's running on and will create a temporary working directory called {hostname} in the current working directory.  The script will prompt for a non-root username. This should be the username used if you run RealVNC Server usermode or virtual mode server.
 The script will default to root if you don't enter anything.
 
 Once finished, it will create a tar file in /var/tmp/vncexplorer. The name of this file is vncsupport-{hostname}.tar
 
 The script will clear up after itself - but please remove /var/tmp/vncexplorer once the file has been submitted to RealVNC Support.
 
- 
 ### Windows
 #### Data collected
-Currently running processes, current user environment, IP addresses, network connection status, VNC registry keys 
+Currently running processes, current user environment, IP addresses, network connection status, VNC registry keys
 (HKLM/Software/RealVNC and HKCU/Software/RealVNC), VNC service status, Event log data for VNC Server
 Secure information (private keys and chat history) is not collected.
 
